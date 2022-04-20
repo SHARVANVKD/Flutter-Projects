@@ -8,6 +8,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  //set Counting Number Starts with zero
   int _counter = 0;
 
   @override
@@ -38,11 +39,11 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  incrementIconButton(),
+                  clickIconButton(btnIcon: Icons.add,), 
                   const SizedBox(
                     width: 50,
                   ),
-                  decrementIconButton(),
+                  clickIconButton(btnIcon: Icons.exposure_minus_1,),
                 ],
               )
             ],
@@ -64,7 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  Widget incrementIconButton() {
+  late final IconData btnIcon;
+  Widget clickIconButton({required btnIcon}) {
     return Container(
       decoration: BoxDecoration(
         shape: BoxShape.circle,
@@ -74,32 +76,21 @@ class _MyHomePageState extends State<MyHomePage> {
       child: IconButton(
         iconSize: 40,
         padding: const EdgeInsets.all(15),
-        icon: const Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-        onPressed: _incrementCounter,
-
-      ),
-    );
-  }
-
-  Widget decrementIconButton() {
-    return Container(
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(color: Colors.white, width: 4),
-        color: Colors.teal,
-      ),
-      child: IconButton(
-        iconSize: 40,
-        padding: const EdgeInsets.all(15),
-        icon: const Icon(
-          Icons.exposure_minus_1,
+        icon:  Icon(
+          btnIcon,
           size: 30,
           color: Colors.white,
         ),
-        onPressed: _dicrementCounter,
+        onPressed: (){
+          if(btnIcon == Icons.add){
+            _incrementCounter();
+           // debugPrint("incriment");
+          }
+          if(btnIcon == Icons.exposure_minus_1){
+            _dicrementCounter();
+            //debugPrint("decriment");
+          }
+        },
       ),
     );
   }
