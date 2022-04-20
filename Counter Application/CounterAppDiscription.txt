@@ -5,7 +5,7 @@
 --------------------------myHomePage---------------------------------------
 	
 	Using Statefull Widget ,
-	2 -- Icon Button Functions,
+	One Icon Button Functions (Include Add Button and Substract Icon Click Function),
 	And Increment & Dicrement Function Are Used In This Application
 
 ---------------------------------------------------------------------------------------------------
