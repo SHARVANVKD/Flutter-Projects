@@ -1,0 +1,21 @@
+--------------------------------------------Slash Screen-------------------------------------
+
+			Only include Icon center of the page
+
+------------------------------------------Login Page----------------------------------------
+			
+			3 Classs Include
+				# MaterialApp 
+	
+				# StateFullState
+					@ create state (Next class)
+
+					@ iniState
+						-- include splash screen to Home page 
+
+-----------------------------------------Home Page------------------------------------------
+
+			2 Text Controller
+			App bar
+			Alert Box
+
