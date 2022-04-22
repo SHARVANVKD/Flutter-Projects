@@ -15,7 +15,7 @@
 
 -----------------------------------------Home Page------------------------------------------
 
-			2 Text Controller
+			2 Text Controller Using One Function
 			App bar
 			Alert Box
 
