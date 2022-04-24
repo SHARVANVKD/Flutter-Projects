@@ -1,0 +1,17 @@
+------------------------------------------Main.dart--------------------------------------
+		
+				just call main page (calculatorApp.dart)
+
+--------------------------------------calculatorApp.dart----------------------------------
+
+			Using 2 function for Button Design
+
+				#) action type button design like + , - , * , / 
+				#)number type button design like 1,2,3,4,5,..
+
+			Using extra button code for Equals and Clear Button
+
+				include equls working code inside the button Action
+				include clear button action 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
