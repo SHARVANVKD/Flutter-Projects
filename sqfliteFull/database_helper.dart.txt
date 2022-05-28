@@ -1,0 +1,29 @@
+late Database _db;
+
+Future <void> initilizeDatabase ()async {
+	_db = await openDatabase(
+		'db_student.db',
+		version: 1,
+		onCreate : (Database database, int version) async {
+  			await database.execute(
+      			'CREATE TABLE tbl_student(id INTEGER PRIMARY KEY, name TEXT, age TEXT)');
+			},
+	);	
+}
+
+//get data
+
+
+Future <void> getAllDatas()async {
+	final _values = await _db.rawQuery('SELECT * FROM tbl_student');
+	_values.foreach((map){
+		final student = StudentModel.fromMap(map);
+	});
+}
+
+//insert 
+Future <void> insertStudents(StudentModel value)async {
+	await _db.rawInsert(
+      			'INSERT INTO tbl_student(name,age) VALUES(?, ?)',
+      			[value.name,value.age]);
+}

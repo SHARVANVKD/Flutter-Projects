@@ -1,0 +1,19 @@
+class StudentModel{
+	int? id1;
+	final String name ; 
+	final String age;
+
+	StudentModel({requird this.name , requird this.age});
+
+//selection purpose
+
+	static StudentModel fromMap(Map<String ,object?> maps){
+
+		//as aakunnath varunnath object aaayathu kondanu
+		final id = maps['id] as int;
+		final name = maps['name] as String;
+		final age = maps['age] as String;
+
+		return StudentModel(id: id,name:name,age:age);
+	}
+}
